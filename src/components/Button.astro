@@ -1,0 +1,63 @@
+---
+const {svg, variant, size} = Astro.props
+---
+
+
+<button data-variant={variant} data-size={size} svg-color={svg}><slot /></button>
+
+
+<style>
+button {
+    display: flex;
+    padding: 3% 6% 3% 6%;
+    border-radius: 50px;
+    font-weight: bold;
+    place-content: center;    
+    justify-content: space-between;
+    transition: scale 33ms ease-in-out;
+}
+
+  button:hover {
+    scale: 1.04;
+  }
+
+[data-variant="white"] {
+    background-color: white;
+}
+
+[data-variant="black"] {
+    background-color: #121212;
+    color: white;
+    border: solid;
+    border-color: #A7A7A7;
+}
+
+[data-variant="black2"] {
+    background-color: #121212;
+    color: #A7A7A7;
+    border: none;
+    border-color: #A7A7A7;
+}
+
+[svg-color="svg"] {
+fill: white;
+gap: 0.4rem;
+}
+
+[data-size="medium"] {
+    font-size: 1rem;
+    min-height: 2rem;
+    padding-block: 0.5rem;
+    padding-inline: 2rem;
+    align-items: center;
+}
+
+[data-size="footer"] {
+    font-size: 1rem;
+    height: 3rem;
+    padding-block: 0.5rem;
+    padding-inline: 2rem;
+    align-items: center;
+}
+
+</style>

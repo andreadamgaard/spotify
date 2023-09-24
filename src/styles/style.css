@@ -1,0 +1,37 @@
+html {
+  background-color: black;
+  font-family: "PT Sans", sans-serif;
+}
+
+.grid_2 {
+  display: flex;
+  flex-direction: column;
+  margin: 0.2rem;
+  width: 16rem;
+  margin-right: 0.5rem;
+  position: -webkit-sticky;
+  position: sticky;
+  top: 0;
+}
+
+a:where(:any-link) {
+  text-decoration: none;
+  color: white;
+}
+
+button {
+  border: none;
+}
+
+h3 {
+  font-size: 1rem;
+}
+
+p {
+  font-size: 0.8rem;
+}
+
+ul,
+li {
+  list-style: none;
+}
